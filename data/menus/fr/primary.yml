@@ -13,4 +13,8 @@ items:
   target: "/onglet-3/"
   kind: page
   children: []
+- title: Onglet 4
+  target: "/onglet-4/"
+  kind: page
+  children: []
 
