@@ -5,7 +5,7 @@ items:
   target: "/test/"
   kind: page
   children: []
-- title: test 2
+- title: Onglet 2
   target: "/test-2/"
   kind: page
   children: []
