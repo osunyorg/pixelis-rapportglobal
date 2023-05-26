@@ -1,7 +1,7 @@
 ---
 title: Menu principal
 items:
-- title: test
+- title: Onglet 1
   target: "/test/"
   kind: page
   children: []
