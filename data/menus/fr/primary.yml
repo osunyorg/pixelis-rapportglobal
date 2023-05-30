@@ -9,7 +9,7 @@ items:
   target: "/test-2/"
   kind: page
   children: []
-- title: Onglet 3
+- title: '3. En quête d’exemplarité '
   target: "/onglet-3/"
   kind: page
   children: []
