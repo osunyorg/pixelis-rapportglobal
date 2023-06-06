@@ -21,4 +21,8 @@ items:
   target: "/5-nos-domaines-dexpertise/"
   kind: page
   children: []
+- title: 6. Chiffres clés
+  target: "/6-nos-chiffres-cles/"
+  kind: page
+  children: []
 
