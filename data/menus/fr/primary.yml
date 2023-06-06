@@ -13,7 +13,7 @@ items:
   target: "/onglet-3/"
   kind: page
   children: []
-- title: 4. Nos challenges
+- title: 4. Se challenger
   target: "/onglet-4/"
   kind: page
   children: []
