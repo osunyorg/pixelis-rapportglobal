@@ -1,7 +1,7 @@
 ---
 title: Menu principal
 items:
-- title: 1. Comité de mission et projets à impact
+- title: 1. S'engager
   target: "/test/"
   kind: page
   children: []
