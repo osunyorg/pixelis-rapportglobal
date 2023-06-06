@@ -5,7 +5,7 @@ items:
   target: "/test/"
   kind: page
   children: []
-- title: 2. Mobilisation de nos collaborateurs
+- title: 2. Se mobiliser
   target: "/test-2/"
   kind: page
   children: []
