@@ -2,3 +2,8 @@ theme: osuny-hugo-theme-aaa
 paginate: 18
 enableRobotsTXT: true
 removePathAccents: true
+params:
+  breadcrumb:
+    position: hero-end
+  summary:
+    position: hero
