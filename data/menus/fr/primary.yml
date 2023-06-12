@@ -1,8 +1,8 @@
 ---
 title: Menu principal
 items:
-- title: 1. S'engager
-  target: "/test/"
+- title: S'engager
+  target: "/1-s-engager/"
   kind: page
   children: []
 - title: 2. Se mobiliser
