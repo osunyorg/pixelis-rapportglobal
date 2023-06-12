@@ -4,6 +4,6 @@ enableRobotsTXT: true
 removePathAccents: true
 params:
   breadcrumb:
-    position: hero-end
+    position: none
   summary:
     position: hero
