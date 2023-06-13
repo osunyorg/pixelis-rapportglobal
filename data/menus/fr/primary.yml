@@ -5,8 +5,8 @@ items:
   target: "/1-s-engager/"
   kind: page
   children: []
-- title: 2. Se mobiliser
-  target: "/test-2/"
+- title: Se mobiliser
+  target: "/se-mobiliser/"
   kind: page
   children: []
 - title: '3. En quête d’exemplarité '
