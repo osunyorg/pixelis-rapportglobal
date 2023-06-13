@@ -9,7 +9,7 @@ items:
   target: "/se-mobiliser/"
   kind: page
   children: []
-- title: '3. En quête d’exemplarité '
+- title: 'En quête d’exemplarité '
   target: "/onglet-3/"
   kind: page
   children: []
