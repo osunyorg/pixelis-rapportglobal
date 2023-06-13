@@ -17,7 +17,7 @@ items:
   target: "/onglet-4/"
   kind: page
   children: []
-- title: 5. Nos domaines d'expertise
+- title: Nos domaines d'expertise
   target: "/5-nos-domaines-dexpertise/"
   kind: page
   children: []
