@@ -1,18 +1,53 @@
 #document-header
     @include media-breakpoint-up(desktop)
         .nav-level-1
-            a
-                text-decoration: none !important
-                &::after
-                    content: ""
-                    position: relative
-                    display: block
-                    width: 100%
-                    height: 2px
-                    background: white
-.hero
-    h1
-        color: black
+            li
+                a
+                    text-underline-offset: 8px
+                    &.active
+                        text-decoration: none
+            li:nth-child(1) a
+                text-decoration-color: $color-engager
+            li:nth-child(2) a
+                text-decoration-color: $color-mobiliser
+            li:nth-child(3) a
+                text-decoration-color: $color-realiser
+            li:nth-child(4) a
+                text-decoration-color: $color-challenger
+            li:nth-child(5) a
+                text-decoration-color: $color-expertises
+            li:nth-child(6) a
+                text-decoration-color: $color-chiffres
+
+.pages__section
+    &.engager .hero
+        background: $color-engager
+        color: $color-engager-alt
+    &.mobiliser .hero
+        background: $color-mobiliser
+        color: $color-mobiliser-alt
+    &.realiser .hero
+        background: $color-realiser
+        color: $color-realiser-alt
+    &.challenger .hero
+        background: $color-challenger
+        color: $color-challenger-alt
+    &.expertises .hero
+        background: $color-expertises
+        color: $color-expertises-alt
+    &.chiffres .hero
+        background: $color-chiffres
+        color: $color-chiffres-alt
+
+.page__home
+    .hero
+        .content
+            h1
+                color: $color-accent
+                @include h5
+            .lead
+                color: $color-text-alt
+                @include h1
 
 .block-chapter--accent_background,
 .block-chapter--alt_background
@@ -21,18 +56,14 @@
             flex-direction: column !important
         p
             text-align: center
-            font-size: px2rem(28)
+            font-size: px2rem(20)
             line-height: 150%
 
 
 .block-chapter--alt_background
-    background: $color-background
-    p
-        color: $color-text
-.block-chapter--accent_background
+    background: $color-accent
     p
         color: black
-
 
 .block-testimonials 
     figure
