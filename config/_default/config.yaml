@@ -5,3 +5,7 @@ removePathAccents: true
 params:
   summary:
     position: hero
+  image_sizes:
+    design_system:
+      lightbox:
+        disabled: true
