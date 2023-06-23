@@ -2,7 +2,7 @@
 title: Menu principal
 items:
 - title: S'engager
-  target: "/1-s-engager/"
+  target: "/s-engager/"
   kind: page
   children: []
 - title: Se mobiliser
@@ -10,19 +10,19 @@ items:
   kind: page
   children: []
 - title: Se réaliser
-  target: "/onglet-3/"
+  target: "/se-realiser/"
   kind: page
   children: []
 - title: Se challenger
-  target: "/onglet-4/"
+  target: "/se-challenger/"
   kind: page
   children: []
 - title: Nos expertises
-  target: "/5-nos-domaines-dexpertise/"
+  target: "/nos-domaines-dexpertise/"
   kind: page
   children: []
 - title: Nos chiffres clés
-  target: "/6-nos-chiffres-cles/"
+  target: "/nos-chiffres-cles/"
   kind: page
   children: []
 
