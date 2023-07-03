@@ -3,6 +3,7 @@ paginate: 18
 enableRobotsTXT: true
 removePathAccents: true
 params:
+  plausible: rapport2022.pixelis.com
   summary:
     position: hero
   image_sizes:
