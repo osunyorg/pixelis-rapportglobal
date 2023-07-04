@@ -18,7 +18,7 @@ items:
   kind: page
   children: []
 - title: Nos expertises
-  target: "/nos-domaines-dexpertise/"
+  target: "/nos-expertises/"
   kind: page
   children: []
 - title: Nos chiffres clés
