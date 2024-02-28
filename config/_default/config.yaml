@@ -10,3 +10,5 @@ params:
     design_system:
       lightbox:
         disabled: true
+  debug:
+     productionUrl: "https://rapport2022.pixelis.com"
