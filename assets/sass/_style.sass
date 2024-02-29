@@ -52,12 +52,12 @@
 .block-chapter--alt_background
     @include media-breakpoint-up(desktop)
         .chapter
-            padding: $spacing3 0
+            padding: $spacing-5 0
             flex-direction: column !important
             align-items: center
         p
             text-align: center
-            font-size: px2rem(20)
+            font-size: pxToRem(20)
             line-height: 150%
 
 .block-chapter--alt_background
@@ -66,14 +66,14 @@
         color: black
 
 body.full-width .block-features .top
-    width: col(7)
+    width: columns(7)
 
 .block-testimonials 
     figure
         figcaption 
             .avatar
                 border-radius: 0
-                width: col(4)
+                width: columns(4)
                 background-color: transparent 
                 picture,
                 img
