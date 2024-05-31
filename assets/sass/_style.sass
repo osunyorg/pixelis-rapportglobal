@@ -1,3 +1,7 @@
+html
+    //scroll-behavior: smooth
+    
+    
 #document-header
     @include media-breakpoint-up(desktop)
         .nav-level-1
@@ -19,24 +23,77 @@
                 text-decoration-color: $color-chiffres
 
 .pages__section
-    &.engager .hero
+    &.page-engager .hero
         background: $color-engager
         color: $color-engager-alt
-    &.mobiliser .hero
+    &.page-mobiliser .hero
         background: $color-mobiliser
         color: $color-mobiliser-alt
-    &.realiser .hero
+    &.page-realiser .hero
         background: $color-realiser
         color: $color-realiser-alt
-    &.challenger .hero
+    &.page-challenger .hero
         background: $color-challenger
         color: $color-challenger-alt
-    &.expertises .hero
+    &.page-expertises .hero
         background: $color-expertises
         color: $color-expertises-alt
-    &.chiffres .hero
-        background: $color-chiffres
-        color: $color-chiffres-alt
+    &.page-chiffres
+        scroll-behavior: smooth
+        //background: #9e70f4
+        .toc-title, .toc-cta, .toc-container button
+            background-color: $color-chiffres
+            color: $color-chiffres-alt
+        @include media-breakpoint-up(desktop)
+            .document-content
+                justify-content: space-between
+                .toc-cta
+                    margin-bottom: 0 
+                    .toc-cta-title
+                        display: none
+                .toc-container
+                    margin: pxToRem(64) 0
+                    background: transparent
+                    transform: none
+                    display: flex
+                    position: initial
+                    width: 100%
+                    .toc-content
+                        display: flex
+                        width: 100%
+                        .toc-title
+                            display: none
+                        .toc-pages
+                            ol
+                                flex-direction: row
+                                //width: 100%
+                                justify-content: space-between
+                                li
+                                    margin-top: 0
+                                    margin: $spacing-1
+                                    a
+                                        @include meta
+                                        text-decoration-color: transparent
+                                        transition: 0.3s ease
+                                        &:hover
+                                            text-decoration-color: $color-chiffres
+                                            
+
+                        button
+                            display: none
+                .blocks
+                    .heading.container
+                        background: $color-chiffres
+                        color: $color-chiffres-alt
+
+
+
+                    
+
+            
+        .hero
+            background: $color-chiffres
+            color: $color-chiffres-alt
 
 .page__home
     .hero
