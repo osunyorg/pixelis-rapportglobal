@@ -1,7 +1,3 @@
-html
-    //scroll-behavior: smooth
-    
-    
 #document-header
     @include media-breakpoint-up(desktop)
         .nav-level-1
@@ -46,17 +42,17 @@ html
             color: $color-chiffres-alt
         @include media-breakpoint-up(desktop)
             .document-content
-                justify-content: space-between
                 .toc-cta
                     margin-bottom: 0 
                     .toc-cta-title
                         display: none
                 .toc-container
+                    position: sticky
                     margin: pxToRem(64) 0
-                    background: transparent
+                    background: black
                     transform: none
                     display: flex
-                    position: initial
+                    //position: initial
                     width: 100%
                     .toc-content
                         display: flex
@@ -66,11 +62,13 @@ html
                         .toc-pages
                             ol
                                 flex-direction: row
-                                //width: 100%
-                                justify-content: space-between
+                                margin: $spacing-1
+                                //justify-content: space-between
+                                justify-content: start
                                 li
-                                    margin-top: 0
-                                    margin: $spacing-1
+                                    margin: 0 $spacing-2
+                                    .active
+                                        color: $color-chiffres
                                     a
                                         @include meta
                                         text-decoration-color: transparent
@@ -81,10 +79,6 @@ html
 
                         button
                             display: none
-                .blocks
-                    .heading.container
-                        background: $color-chiffres
-                        color: $color-chiffres-alt
 
 
 
@@ -94,6 +88,7 @@ html
         .hero
             background: $color-chiffres
             color: $color-chiffres-alt
+            margin-bottom: 0
 
 .page__home
     .hero
