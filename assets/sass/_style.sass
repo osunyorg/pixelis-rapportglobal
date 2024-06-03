@@ -36,7 +36,6 @@
         color: $color-expertises-alt
     &.page-chiffres
         scroll-behavior: smooth
-        //background: #9e70f4
         .toc-title, .toc-cta, .toc-container button
             background-color: $color-chiffres
             color: $color-chiffres-alt
@@ -53,7 +52,6 @@
                     background: black
                     transform: none
                     display: flex
-                    //position: initial
                     width: 100%
                     .toc-content
                         display: flex
@@ -64,7 +62,6 @@
                             ol
                                 flex-direction: row
                                 margin: $spacing-1
-                                //justify-content: space-between
                                 justify-content: start
                                 li
                                     margin: 0 $spacing-2
@@ -73,6 +70,7 @@
                                     a
                                         @include meta
                                         text-decoration-color: transparent
+                                        text-underline-offset: 8px
                                         transition: 0.3s ease
                                         &:hover
                                             text-decoration-color: $color-chiffres
