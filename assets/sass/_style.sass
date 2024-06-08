@@ -36,7 +36,13 @@
         color: $color-expertises-alt
     &.page-chiffres
         scroll-behavior: smooth
-        .toc-title, .toc-cta, .toc-container button
+        .hero
+            background: $color-chiffres
+            color: $color-chiffres-alt
+            margin-bottom: 0
+        .toc-title,
+        .toc-cta,
+        .toc-container button
             background-color: $color-chiffres
             color: $color-chiffres-alt
         @include media-breakpoint-up(desktop)
@@ -64,7 +70,8 @@
                                 margin: $spacing-1
                                 justify-content: start
                                 li
-                                    margin: 0 $spacing-2
+                                    margin: 0
+                                    margin-right: $spacing-4
                                     .active
                                         color: #ffa489
                                     a
@@ -74,20 +81,8 @@
                                         transition: 0.3s ease
                                         &:hover
                                             text-decoration-color: $color-chiffres
-                                            
-
                         button
                             display: none
-
-
-
-                    
-
-            
-        .hero
-            background: $color-chiffres
-            color: $color-chiffres-alt
-            margin-bottom: 0
 
 .page__home
     .hero
@@ -108,7 +103,7 @@
             align-items: center
         p
             text-align: center
-            font-size: pxToRem(20)
+            font-size: pxToRem(26)
             line-height: 150%
 
 .block-chapter--alt_background
