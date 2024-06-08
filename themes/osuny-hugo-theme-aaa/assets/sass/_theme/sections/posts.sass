@@ -1,0 +1,100 @@
+.post
+    @include article
+    .post-title
+        @include h3
+        a
+            @include stretched-link
+            display: block
+            text-decoration: none
+    time
+        color: $post-time-color
+        display: inline-block
+        vertical-align: middle
+    .post-author
+        @include meta
+        color: var(--color-text-alt)
+
+.posts__section,
+.authors__term,
+.posts_categories__term,
+.persons__page
+    .posts--list
+        article
+            border-bottom: 1px solid var(--color-border)
+            display: flex
+            margin-bottom: $spacing-3
+            padding-bottom: $spacing-3
+            flex-direction: row
+            .post-title + p
+                margin-top: $spacing-2
+            @include media-breakpoint-up(desktop)
+                @include grid
+                margin-bottom: $spacing-5
+                padding-bottom: $spacing-5
+            .post-content
+                grid-column: 4/13
+                @include media-breakpoint-down(desktop)
+                    flex: 1
+                    margin-left: $spacing-2
+                p:not(.title)
+                    @include media-breakpoint-down(desktop)
+                        display: none
+            .media
+                background: none
+                margin: 0
+                @include media-breakpoint-down(desktop)
+                    width: 33.33333%
+                @include media-breakpoint-up(desktop)
+                    grid-column: 1/4
+                &, img
+                    aspect-ratio: auto
+            @include media-breakpoint-up(desktop)
+                .post-meta
+                    position: absolute
+                    right: 0
+                    text-align: right
+                    top: 0
+                    time
+                        font-size: $h5-size
+                .post-content
+                    .post-title,
+                    > p
+                        max-width: columns(6)
+    .posts--grid
+        @include grid(1)
+        @include grid(2, desktop)
+        @include grid($posts-grid-columns, xxl)
+        .post
+            @include author-and-time-side-to-side
+            .post-meta
+                margin-top: $spacing-2
+
+.posts__page
+    .lead
+        @include h3
+        // Safe spacing if post is empty
+    .document-content
+        min-height: 350px
+        // Add after element to avoid "min-height" to ignore the last block's margin-bottom
+        &::after
+            content: ''
+            display: block
+            height: 1px
+    &:not(.full-width)
+        .post-sidebar
+            @include sidebar
+
+.post-infos
+    @include section__page-infos
+
+.related
+    margin-top: $spacing-3
+    .posts
+        @include grid(2, desktop)
+        margin-bottom: 0
+    .link
+        @extend .link-more
+
+.authors__term
+    .blocks + .container
+        margin-top: $spacing-5

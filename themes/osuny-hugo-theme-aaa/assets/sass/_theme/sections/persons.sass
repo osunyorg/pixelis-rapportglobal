@@ -1,0 +1,216 @@
+.person
+    @include article
+    word-break: break-word
+    gap: $spacing-3
+    .avatar
+        align-self: start
+        flex-shrink: 0
+        order: -1
+        min-width: $spacing-5
+    .name
+        @include h4
+        a
+            @include stretched-link
+            text-decoration: none
+        + p
+            margin-top: $spacing-1
+    .description
+        @include small
+    @include media-breakpoint-down(lg)
+        flex-direction: row
+        gap: $spacing-3
+        .avatar
+            align-self: start
+            flex-shrink: 0
+            margin-bottom: 0
+            width: 100px
+
+    @include media-breakpoint-down(md)
+        justify-content: space-between
+        .avatar
+            order: 1
+            margin-right: 0
+            width: 68px
+
+    @include in-page-without-sidebar
+        text-align: center
+        .avatar
+            width: 100%
+
+section.persons,
+div.persons
+    @include grid(1)
+    @include grid(2, md)
+    @include grid(4, lg)
+    @include grid(6, xxl)
+
+ol.persons--list
+    @include list-reset
+    > li
+        border-bottom: 1px solid var(--color-border)
+        padding-bottom: $spacing-3
+        padding-top: $spacing-3
+        position: relative
+        transition: color 0.5s
+        @include icon(arrow, after)
+            margin-left: auto
+        &:hover
+            color: var(--color-accent)
+            justify-self: end
+        a
+            @include stretched-link
+            text-decoration: none
+            color: inherit
+        [itemprop="jobTitle"]
+            @include small
+            margin-top: 0
+        @include media-breakpoint-up(desktop)
+            align-items: baseline
+            display: flex
+            [itemprop="name"]
+                width: columns(5)
+            [itemprop="jobTitle"]
+                width: columns(6)
+                margin-left: var(--grid-gutter)
+        @include media-breakpoint-down(desktop)
+            &::after
+                position: absolute
+                right: 0
+                top: calc(#{$spacing-3} + 10px)
+
+.avatar
+    // @include aspect-ratio(50, 'img')
+    background-color: $persons-avatar-background-color
+    border-radius: 50%
+    // margin-bottom: $spacing-4
+    overflow: hidden
+    position: relative
+    // width: 100%
+    &::before
+        content: ""
+        display: block
+        padding-top: 100%
+    picture, img
+        @include inset(0)
+        height: 100%
+        width: 100%
+        position: absolute
+    img
+        object-fit: cover
+
+/* TODO revoir ce nom */
+.taxonomies-persons
+    @include list-reset
+    li
+        @include media-breakpoint-down(desktop)
+            margin-bottom: $spacing-3
+            a
+                display: block
+        @include media-breakpoint-up(desktop)
+            display: inline-block
+            margin-right: $spacing-4
+    a
+        @extend %underline-on-hover
+        @include meta
+        @include icon(arrow, after)
+            margin-left: $spacing-3
+
+.persons__section
+    * + .persons
+        margin-top: $spacing-4
+    .persons:last-child
+        padding-bottom: $spacing-5
+
+.persons__page
+    .hero
+        &--with-image
+            .hero-text
+                margin-bottom: $spacing-3
+            figure picture
+                @extend .avatar
+            @include media-breakpoint-down(desktop)
+                .container
+                    margin-bottom: calc(#{columns(2)} + #{$spacing-5})
+                figure
+                    width: columns(4)
+                    margin-left: auto
+                    margin-bottom: calc(#{columns(2)} * -1)
+            @include media-breakpoint-down(md)
+                .container
+                    margin-bottom: calc(#{columns(3)} + #{$spacing-5})
+                figure
+                    width: columns(6)
+                    margin-bottom: calc(#{columns(3)} * -1)
+            @include media-breakpoint-up(desktop)
+                .content
+                    align-items: center
+                    display: flex
+                    justify-content: space-between
+                    margin-top: 0
+                    h1
+                        margin-bottom: 0
+                        width: columns(8)
+                    figure
+                        margin-bottom: 0
+                        width: columns(3)
+    .roles
+        a
+            @include small
+    .blocks
+        margin-top: $spacing-5
+    .person-objects
+        margin-top: $spacing-5
+        > * + *
+            margin-top: $spacing-5
+        .top h2 a
+            @include icon(arrow-right, after, true)
+                display: inline-flex
+                margin-left: $spacing-1
+                transition: transform .3s ease
+            &:hover::after
+                transform: translateX($spacing-2)
+    .person-posts
+        article.post:last-child
+            margin-bottom: 0
+    section
+        padding-bottom: $spacing-5
+    ol.programs
+        li
+            justify-content: flex-start
+            @include media-breakpoint-up(desktop)
+                @include grid(2)
+            @include icon(arrow-right, after, true)
+                color: inherit
+                position: absolute
+                right: 0
+                top: 1.5em
+            a
+                color: inherit
+                @include stretched-link(before)
+                @include media-breakpoint-down(desktop)
+                    margin-right: $spacing-3
+            p
+                margin-top: unset
+                &:nth-child(2)
+                    @include small
+            &:hover
+                color: var(--color-accent)
+    @include media-breakpoint-down(lg)
+        .roles
+            margin-top: $spacing-4
+    @include media-breakpoint-up(lg)
+        .informations
+            @include grid
+            margin-bottom: $spacing-4
+            > div:first-of-type
+                grid-column: 1 / 9
+            .roles
+                grid-column: 9 / 13
+                text-align: right
+            .lead + div
+                margin-top: $spacing-4
+    .contacts-details ul
+        @include grid(2, md, 0)
+        li
+            margin-top: 0
+            margin-bottom: $spacing-3

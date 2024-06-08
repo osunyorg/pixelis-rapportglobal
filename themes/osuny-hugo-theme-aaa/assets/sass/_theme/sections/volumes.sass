@@ -1,0 +1,54 @@
+.volume
+    @include article
+    .volume-title
+        @include article-title
+    .suptitle
+        @include meta
+
+.volumes
+    @include grid(2, md)
+    @include grid(3, lg)
+    
+.volumes__taxonomy
+    .volume
+        .media
+            img
+                aspect-ratio: 1 / 1.2
+.volumes__term
+    .document-content
+        .container
+            @include media-breakpoint-up(desktop)
+                @include grid
+            .content
+                @include media-breakpoint-up(desktop)
+                    grid-column: 1 / 8
+                h2
+                    @include meta
+                > div
+                    margin-bottom: $spacing-3
+                    @include media-breakpoint-up(desktop)
+                        margin-bottom: $spacing-6
+            .document-aside
+                @include media-breakpoint-up(desktop)
+                    grid-column: 9 / 12
+                    order: 2
+                dl
+                    margin: 0
+                    dt
+                        @include meta
+                        &:not(:first-of-type)
+                            margin-top: $spacing-4
+    .paper
+        gap: $spacing-3
+        .paper-actions
+            > *
+                width: auto
+        @include media-breakpoint-down(xxl)
+            > div:first-of-type
+                .paper-volume
+                    display: inline-flex
+                    margin-left: $spacing-2
+        @include media-breakpoint-up(xxl)
+            > div:first-of-type
+                .paper-volume
+                    padding-left: $spacing-3

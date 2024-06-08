@@ -1,0 +1,21 @@
+.nav-accessibility
+    padding: $spacing-3
+    position: absolute
+    transform: translateY(-300%)
+    z-index: $zindex-nav-accessibility
+    a
+        color: black
+    ul
+        @include list-reset
+    li
+        display: inline-block
+        margin-right: pxToRem(5)
+    &:focus-within
+        background: white
+        transform: translateY(0)
+
+.transcription
+    summary
+        text-align: right
+        cursor: pointer
+

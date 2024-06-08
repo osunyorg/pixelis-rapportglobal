@@ -1,0 +1,155 @@
+.block-gallery
+    figure
+        display: block
+        margin-bottom: 0
+        position: relative
+        > a,
+        img,
+        picture
+            display: block
+        > a
+            @include stretched-link
+        img
+            height: auto
+            width: 100%
+        figcaption
+            @include small
+            margin-top: $spacing-2
+            position: relative
+            > * + *
+                margin-top: $spacing-1
+            p
+                margin-bottom: 0
+        .credit
+            *
+                @include meta
+
+    @include in-page-without-sidebar
+        .top
+            @include grid(2, desktop)
+            align-items: baseline
+
+    &--grid
+        .gallery
+            @include in-page-with-sidebar
+                @include flexbox-grid(2)
+            @include in-page-without-sidebar
+                @include flexbox-grid(4)
+            @include media-breakpoint-down(desktop)
+                @include flexbox-grid(2)
+            &--with-text
+                @include in-page-without-sidebar
+                    @include flexbox-grid(4)
+
+    &--large
+        figure
+            margin-bottom: $spacing-5
+            @include media-breakpoint-down(desktop)
+                picture
+                    margin-left: var(--grid-gutter-negative)
+                    margin-right: var(--grid-gutter-negative)
+            @include in-page-without-sidebar
+                &.image-portrait,
+                &.image-square
+                    picture
+                        width: columns(8)
+                        margin-left: offset(2)
+        @include in-page-without-sidebar
+            figure
+                &.image-portrait,
+                &.image-square
+                    figcaption
+                        margin-left: offset(2)
+                        margin-right: offset(2)
+                figcaption
+                    display: flex
+                    justify-content: space-between
+                    align-items: baseline
+                    p
+                        max-width: columns(8)
+                    *
+                        flex: 1 1
+                    .credit
+                        margin-top: 0
+                        text-align: right
+
+    &--carousel
+        overflow: hidden
+        position: relative
+        z-index: 0
+        @include in-page-without-sidebar
+            background: $block-gallery-carousel-background
+            padding-bottom: var(--grid-gutter)
+            padding-top: var(--grid-gutter)
+        .block-gallery + &,
+        .block-pages--cards + &
+            margin-top: 0
+        .splide
+            display: flex
+            flex-direction: column
+            @include in-page-with-sidebar
+                &.is-moving
+                    .splide__slide.is-active
+                        opacity: 0.1
+            &__track
+                overflow: visible
+                margin-right: var(--grid-gutter-negative)
+                @include in-page-with-sidebar
+                    .splide__slide
+                        transition: opacity  .3s ease
+                        opacity: 0.1
+                        &.is-next
+                            opacity: 0.6
+                        &.is-active
+                            opacity: 1
+            &__slide
+                flex-shrink: initial
+                &:last-child
+                    padding-right: 20%
+            figure
+                margin-right: $spacing-3
+                @include media-breakpoint-down(desktop)
+                    display: flex
+                    flex-direction: column
+                    justify-content: end
+                picture
+                    img
+                        // FIXME Arnaud: I would like images at constant height, can't manage to get it right.
+                        max-height: $block-gallery-carousel-max-height
+                        width: auto
+                        height: auto
+                        max-width: calc(100vw - #{var(--grid-gutter)} * 2)
+                        @include media-breakpoint-up(desktop)
+                            height: $block-gallery-carousel-max-height
+                            width: auto
+                            max-width: none
+
+            &__arrows
+                margin-left: pxToRem(-18)
+                order: 2
+                @media (min-height: 800px)
+                    padding-top: space(10)
+            &__arrow
+                &--prev,
+                &--next
+                    @include button-reset
+                    @include icon(arrow-left, before)
+                    height: $spacing-4
+                    padding: 0
+                    position: static
+                    width: $spacing-4
+                    svg
+                        display: none
+                &--next
+                    @include icon(arrow-right, before)
+
+        @include in-page-without-sidebar
+            .splide
+                figure
+                    margin-left: var(--grid-gutter)
+                    margin-right: -$spacing-3
+                &__slide
+                    &:first-child
+                        margin-left: var(--grid-gutter)
+                &__track
+                    margin-left: var(--grid-gutter-negative)

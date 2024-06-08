@@ -1,0 +1,154 @@
+.block-call_to_action
+    --cta-background-color: #{$block-call-to-action-background}
+    margin-bottom: 0
+    .top
+        margin-bottom: 0
+        .block-title
+            margin-bottom: $spacing-2
+            + .description
+                margin-top: 0
+        .description
+            * + ul, * + ol
+                margin-top: space(4)
+            ul:last-child, ol:last-child
+                margin-bottom: 0
+    .call_to_action
+        color: $block-call-to-action-color
+        .description
+            a
+                color: inherit
+                text-decoration-color: $block-call-to-action-color
+            p
+                @include h2
+        .actions
+            [role="group"]
+                @include media-breakpoint-down(desktop)
+                    display: flex
+                    flex-direction: column
+            a
+                @include meta
+                @extend %underline-on-hover
+                color: $block-call-to-action-color
+                margin-right: $spacing-3
+                margin-top: $spacing-3
+                display: inline-block
+                text-decoration-color: alphaColor($block-call-to-action-color, 0.3)
+                &:first-child
+                    --btn-background: #{$block-call-to-action-button-background}
+                    --btn-border: #{$block-call-to-action-button-border}
+                    --btn-color: #{$block-call-to-action-button-color}
+                    --btn-hover-background: #{$block-call-to-action-button-hover-background}
+                    --btn-hover-border: #{$block-call-to-action-button-hover-border}
+                    --btn-hover-color: #{$block-call-to-action-button-hover-color}
+                    --btn-min-width: #{columns(2)}
+                    @extend .button
+                &:last-child
+                    margin-bottom: 0
+        * + .actions
+            margin-top: $spacing-3
+        img
+            display: block
+
+    @include media-breakpoint-down(desktop)
+        background-color: var(--cta-background-color)
+        padding-top: 0
+        padding-bottom: 0
+        .call_to_action
+            padding: var(--block-space-y) 0
+            .actions
+                a
+                    &:last-child
+                        margin-bottom: 0
+        .call_to_action--with-image
+            padding-top: var(--grid-gutter)
+            display: flex
+            flex-direction: column
+            > *
+                order: 2
+            picture
+                margin-bottom: offset(1)
+                order: 1
+
+    @include in-page-with-sidebar
+        .call_to_action
+            display: flex
+            flex-direction: column
+            > *
+                order: 2
+            > div
+                // TODO : simplifier l'application d'une couleur de fond sur le CTA avec sidebar et sans sidebar
+                background-color: var(--cta-background-color)
+                padding: columns(1)
+                width: 100%
+                position: relative
+                &::after
+                    background-color: var(--cta-background-color)
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 0
+                    bottom: 0
+                    left: 100%
+                    // Calcul de la largeur nécessaire pour remplir l'espace droit entre le container et le bord droit de la fenêtre
+                    width: grid-external-space()
+            &--with-image
+                picture
+                    order: 1
+                    padding-left: columns(1)
+                    padding-right: offset(4)
+                    position: relative
+                    z-index: 2
+                    img
+                        margin-bottom: calc(var(--grid-gutter-negative) + -#{$spacing-3})
+                > div
+                    padding-top: calc(var(--grid-gutter) * 2 + #{$spacing-3})
+
+    @include in-page-without-sidebar
+        background-color: var(--cta-background-color)
+        padding-top: 0
+        padding-bottom: 0
+        .block-content
+            padding: $spacing-6 var(--grid-gutter)
+            margin-left: var(--grid-gutter-negative)
+            margin-right: var(--grid-gutter-negative)
+        .call_to_action--with-image
+            @include grid
+            > div
+                grid-column: 1/7
+            > picture
+                grid-column: 8/13
+        .call_to_action--without-image
+            display: block
+            > div
+                @include grid
+                row-gap: 0px
+                .top
+                    grid-column: 1/9
+                    display: grid
+                    grid-template-rows: subgrid
+                    grid-row: span 2
+                .actions
+                    align-items: flex-start
+                    display: flex
+                    flex-direction: column
+                    grid-column: 10/13
+                    margin-top: 0
+                    a
+                        margin-right: 0
+                        &:first-child
+                            margin-top: 0
+                    a + a
+                        margin-top: $spacing-3
+            &.call_to_action--with-title
+                .actions
+                    grid-row: 2
+
+            @include media-breakpoint-down(lg)
+                > div
+                    .top
+                        grid-column: 1/8
+                    .actions
+                        grid-column: 9/13
+    @include in-page-with-or-without-sidebar
+        .block-title
+            @include h5
