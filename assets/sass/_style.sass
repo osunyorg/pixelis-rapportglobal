@@ -1,3 +1,7 @@
+
+html
+    scroll-behavior: smooth
+    
 #document-header
     @include media-breakpoint-up(desktop)
         .nav-level-1
@@ -35,7 +39,6 @@
         background: $color-expertises
         color: $color-expertises-alt
     &.page-chiffres
-        scroll-behavior: smooth
         .hero
             background: $color-chiffres
             color: $color-chiffres-alt
@@ -90,7 +93,7 @@
             h1
                 color: $color-accent
                 @include h5
-            .lead
+            .has-lead > p
                 color: $color-text-alt
                 @include h1
 
