@@ -5,24 +5,30 @@ items:
   target: "/s-engager/"
   kind: page
   children: []
+  file: content/fr/pages/s-engager/_index.html
 - title: Se mobiliser
   target: "/se-mobiliser/"
   kind: page
   children: []
+  file: content/fr/pages/se-mobiliser/_index.html
 - title: Se réaliser
   target: "/se-realiser/"
   kind: page
   children: []
+  file: content/fr/pages/se-realiser/_index.html
 - title: Se challenger
   target: "/se-challenger/"
   kind: page
   children: []
+  file: content/fr/pages/se-challenger/_index.html
 - title: Nos expertises
   target: "/nos-expertises/"
   kind: page
   children: []
+  file: content/fr/pages/nos-expertises/_index.html
 - title: Nos chiffres clés
   target: "/nos-chiffres-cles/"
   kind: page
   children: []
+  file: content/fr/pages/nos-chiffres-cles/_index.html
 
