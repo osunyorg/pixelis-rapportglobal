@@ -2,6 +2,11 @@
 
 baseURL: https://rapport.pixelis.com
 
+## OSUNY
+osuny:
+  website:
+    id: 715c8964-d5e7-4ca3-bfec-4edeca076f45
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
