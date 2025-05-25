@@ -1,7 +1,5 @@
 theme: osuny
-paginate: 18
-enableRobotsTXT: true
-removePathAccents: true
+_merge: deep
 params:
   plausible: rapport2022.pixelis.com
   summary:
@@ -10,7 +8,7 @@ params:
     design_system:
       lightbox:
         disabled: true
-  menu:  
+  menu:
     home:
       toc:
         disabled: false
