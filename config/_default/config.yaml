@@ -4,10 +4,9 @@ params:
   plausible: rapport2022.pixelis.com
   summary:
     position: hero
-  image_sizes:
-    design_system:
-      lightbox:
-        disabled: true
+  components:
+    lightbox:
+      disabled: true
   menu:
     home:
       toc:
