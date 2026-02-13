@@ -2,45 +2,57 @@
 title: Menu principal
 items:
 - title: S'engager
+  slug: s-engager
   target: "/s-engager/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/s-engager"
   file: content/fr/pages/s-engager/_index.html
 - title: Se mobiliser
+  slug: se-mobiliser
   target: "/se-mobiliser/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/se-mobiliser"
   file: content/fr/pages/se-mobiliser/_index.html
 - title: Se réaliser
+  slug: se-realiser
   target: "/se-realiser/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/se-realiser"
   file: content/fr/pages/se-realiser/_index.html
 - title: Se challenger
+  slug: se-challenger
   target: "/se-challenger/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/se-challenger"
   file: content/fr/pages/se-challenger/_index.html
 - title: Nos expertises
+  slug: nos-expertises
   target: "/nos-expertises/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/nos-expertises"
   file: content/fr/pages/nos-expertises/_index.html
 - title: Nos chiffres clés
+  slug: nos-chiffres-cles
   target: "/nos-chiffres-cles/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/nos-chiffres-cles"
   file: content/fr/pages/nos-chiffres-cles/_index.html
 
