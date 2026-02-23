@@ -7,6 +7,11 @@ osuny:
   website:
     id: 715c8964-d5e7-4ca3-bfec-4edeca076f45
 
+## PARAMS
+params:
+  _merge: deep
+  plausible: "rapport2022.pixelis.com"
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
