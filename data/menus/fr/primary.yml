@@ -10,33 +10,33 @@ items:
   descendants_targets: []
   path: "/pages/design"
   file: content/fr/pages/design/_index.html
-- title: Se mobiliser
-  slug: se-mobiliser
-  target: "/se-mobiliser/"
+- title: Business
+  slug: business
+  target: "/business/"
   kind: page
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/pages/se-mobiliser"
-  file: content/fr/pages/se-mobiliser/_index.html
-- title: Se réaliser
-  slug: se-realiser
-  target: "/se-realiser/"
+  path: "/pages/business"
+  file: content/fr/pages/business/_index.html
+- title: Impact Social
+  slug: impact-social
+  target: "/impact-social/"
   kind: page
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/pages/se-realiser"
-  file: content/fr/pages/se-realiser/_index.html
-- title: Se challenger
-  slug: se-challenger
-  target: "/se-challenger/"
+  path: "/pages/impact-social"
+  file: content/fr/pages/impact-social/_index.html
+- title: IMPACT ENVIRONNEMENTAL
+  slug: impact-environnemental
+  target: "/impact-environnemental/"
   kind: page
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/pages/se-challenger"
-  file: content/fr/pages/se-challenger/_index.html
+  path: "/pages/impact-environnemental"
+  file: content/fr/pages/impact-environnemental/_index.html
 - title: Nos expertises
   slug: nos-expertises
   target: "/nos-expertises/"
