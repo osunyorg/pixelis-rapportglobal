@@ -28,7 +28,7 @@ items:
   descendants_targets: []
   path: "/pages/impact-social"
   file: content/fr/pages/impact-social/_index.html
-- title: IMPACT ENVIRONNEMENTAL
+- title: Impact environnemental
   slug: impact-environnemental
   target: "/impact-environnemental/"
   kind: page
