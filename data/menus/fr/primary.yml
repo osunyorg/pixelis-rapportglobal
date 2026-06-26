@@ -19,7 +19,7 @@ items:
   descendants_targets: []
   path: "/pages/business"
   file: content/fr/pages/business/_index.html
-- title: Impact Social
+- title: Impact social
   slug: impact-social
   target: "/impact-social/"
   kind: page
@@ -37,15 +37,6 @@ items:
   descendants_targets: []
   path: "/pages/impact-environnemental"
   file: content/fr/pages/impact-environnemental/_index.html
-- title: 30 ans
-  slug: 30-ans
-  target: "/30-ans/"
-  kind: page
-  new_tab: false
-  children: []
-  descendants_targets: []
-  path: "/pages/30-ans"
-  file: content/fr/pages/30-ans/_index.html
 - title: Nos chiffres clés
   slug: nos-chiffres-cles
   target: "/nos-chiffres-cles/"
@@ -55,4 +46,13 @@ items:
   descendants_targets: []
   path: "/pages/nos-chiffres-cles"
   file: content/fr/pages/nos-chiffres-cles/_index.html
+- title: 30 ans
+  slug: 30-ans
+  target: "/30-ans/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/30-ans"
+  file: content/fr/pages/30-ans/_index.html
 
