@@ -37,7 +37,7 @@ items:
   descendants_targets: []
   path: "/pages/impact-environnemental"
   file: content/fr/pages/impact-environnemental/_index.html
-- title: Nos chiffres clés
+- title: Nos chiffres-clés
   slug: nos-chiffres-cles
   target: "/nos-chiffres-cles/"
   kind: page
